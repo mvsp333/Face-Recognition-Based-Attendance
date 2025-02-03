@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block title %}Attendance{% endblock %} {% block
+content %}
+<h1>Attendance</h1>
+{% if current_student %}
+<p>Current Student: {{ current_student }}</p>
+{% else %}
+<p>No student identified yet.</p>
+{% endif %}
+<form id="captureForm">
+  <button type="button" class="btn btn-primary" id="captureButton">
+    Capture
+  </button>
+</form>
+<div class="video-container">
+  <img src="{{ url_for('video_feed') }}" />
+</div>
+
+<script>
+  document.getElementById("captureButton").onclick = function () {
+    fetch('{{ url_for("capture") }}', {
+      method: "POST",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        alert(data.message);
+        if (data.status === "success") {
+          window.location.reload();
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
+</script>
+{% endblock %}

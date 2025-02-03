@@ -1,0 +1,59 @@
+body {
+  text-align: center;
+  background-color: #ffebcd;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: Roboto;
+  font-weight: normal;
+  color: rgb(50, 50, 50);
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  font-family: Roboto;
+  font-weight: normal;
+  color: rgb(100, 100, 100);
+  text-align: center;
+}
+.ptext {
+  font-family: Roboto;
+  color: rgb(80, 80, 80);
+}
+.cntr {
+  max-width: 720px;
+  margin: 0 auto 0 auto;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.video-container img {
+  max-width: 100%;
+  height: auto;
+  border: 5px solid #343a40;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.alert {
+  margin-bottom: 10px;
+}
+
+.wait {
+    color: yellow;
+}
+
+.allowed {
+    color: green;
+}
+
+.not-allowed {
+    color: red;
+}
